@@ -55,8 +55,8 @@ def mock_history_path(monkeypatch):
     os.remove(fake_path)
 @pytest.fixture
 def mock_trash(monkeypatch):
-    import src.commands.filesystem as fs  # noqa: E402
-    import src.utils.helpers as helpers  # noqa: E402
+    import src.commands.filesystem as fs
+    import src.utils.helpers as helpers
     tmp_trash = tempfile.mkdtemp()
     monkeypatch.setattr(helpers, "TRASH_PATH", tmp_trash)
     monkeypatch.setattr(fs, "move_to_trash", helpers.move_to_trash)
