@@ -3,7 +3,7 @@ import logging
 import pathlib
 import shlex
 import socket
-
+from src.constants import LOG_FILE
 import src.commands as com
 from errors.shell_errors import ShellError
 
@@ -25,7 +25,7 @@ commands = {
 }
 
 logging.basicConfig(
-    filename='shell.log',
+    filename=LOG_FILE,
     level=logging.INFO,
     format='[%(asctime)s] %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'

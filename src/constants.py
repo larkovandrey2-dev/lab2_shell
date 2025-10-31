@@ -1,3 +1,8 @@
+import pathlib
 RIGHTS = {4:'r',2:'w',1:'x'}
-TRASH_PATH = '/Users/andrew/Documents/GitHub/lab2/src/.trash'
-HISTORY_PATH = '/Users/andrew/Documents/GitHub/lab2/src/.history'
+ROOT_DIR = pathlib.Path(__file__).resolve().parent
+PROJECT_ROOT = ROOT_DIR.parent
+TRASH_PATH = PROJECT_ROOT / "src" / ".trash"
+HISTORY_PATH = PROJECT_ROOT / "src" / ".history"
+LOG_FILE = PROJECT_ROOT / "src" / "shell.log"
+TRASH_PATH.mkdir(exist_ok=True)
