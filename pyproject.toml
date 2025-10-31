@@ -1,0 +1,20 @@
+[project]
+name = "console-app-with-logging"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.13"
+dependencies = [
+    "ruff>=0.14.2",
+    "typer>=0.20.0",
+]
+[tool.mypy]
+files = ["src"]
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "pytest"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "tests.*"
+ignore_missing_imports = true
