@@ -54,6 +54,9 @@ def get_last_history(n=10):
     if not data:
         return res
     for i,line in enumerate(data[len(data) - n - 1:]):
+        line = line.strip()
+        if not line:
+            continue
         cmd_data = json.loads(line)
         res.append((cmd_data["number"], cmd_data["user_input"]))
     return sorted(set(res),key=lambda x:x[0])
@@ -71,6 +74,9 @@ def get_last_history_undo_cmd():
     if not data:
         return []
     for i,line in enumerate(data[::-1]):
+        line = line.strip()
+        if not line:
+            continue
         cmd_data = json.loads(line)
         if cmd_data["cmd"] not in ["rm","cp","mv"]:
             continue
