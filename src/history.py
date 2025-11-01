@@ -31,6 +31,9 @@ def get_last_history_number():
         return 0
     last_number = 0
     for line in data:
+        line = line.strip()
+        if not line:
+            continue
         cmd_data = json.loads(line)
         if "number" in cmd_data and cmd_data["number"]:
             last_number = max(int(cmd_data["number"]),last_number)

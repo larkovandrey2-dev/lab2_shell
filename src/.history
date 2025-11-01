@@ -1,9 +1,0 @@
-{"cmd": "cd", "user_input": "cd ..", "number": 1}
-{"cmd": "ls", "number": 2, "user_input": "ls "}
-{"cmd": "cd", "user_input": "cd ../..//", "number": 3}
-{"cmd": "cd", "user_input": "cd //", "number": 4}
-{"cmd": "cd", "user_input": "cd ///", "number": 5}
-{"cmd": "cd", "user_input": "cd ///////", "number": 6}
-{"cmd": "ls", "number": 7, "user_input": "ls -a"}
-{"cmd": "ls", "number": 8, "user_input": "ls -la"}
-{"cmd": "history", "user_input": "history ", "number": 9}
