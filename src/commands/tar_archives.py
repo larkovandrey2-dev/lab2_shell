@@ -63,7 +63,7 @@ def cmd_untar(args):
 
     try:
         with tarfile.open(archive, "r:gz") as tf:
-            tf.extractall(Path().cwd())
+            tf.extractall(Path().cwd(),filter="data")
         record = {
             "cmd": "untar",
             "num": get_last_history_number() + 1,

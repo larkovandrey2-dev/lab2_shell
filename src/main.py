@@ -3,6 +3,7 @@ import logging
 import pathlib
 import shlex
 import socket
+import sys
 from src.constants import LOG_FILE
 import src.commands as com
 from errors.shell_errors import ShellError
@@ -51,6 +52,8 @@ if __name__ == "__main__":
                 logging.error(f"ERROR: {command}: {e}")
         elif not command:
             continue
+        elif command[0].lower() in ["exit", "quit", "stop"]:
+            sys.exit(0)
         else:
             print(f'{user_input}: unknown command')
             logging.error(f"ERROR: {user_input} is not a valid command")
