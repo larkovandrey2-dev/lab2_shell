@@ -195,3 +195,16 @@ def cmd_rm(args):
                     record = {"cmd": "rm", "skipped": True, "user_input": "rm " + " ".join(args),
                               "number": last_cmd_number,"multi":len(clean_args)}
                     create_history_record(record)
+
+def cmd_touch(args):
+    if len(args) == 0:
+        raise ShellError("touch: not enough arguments")
+    else:
+        for p in args:
+            src = normalize(p)
+            if src.exists():
+                continue
+            try:
+                pathlib.Path(src).touch()
+            except Exception as e:
+                raise ShellError(f"touch: '{src}' failed with error: '{e}'")

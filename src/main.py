@@ -23,6 +23,8 @@ commands = {
     "tar": com.cmd_tar,
     "untar": com.cmd_untar,
     "grep": com.cmd_grep,
+    "touch": com.cmd_touch,
+    "bc": com.cmd_bc,
 }
 
 logging.basicConfig(

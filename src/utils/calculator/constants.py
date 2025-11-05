@@ -1,0 +1,1 @@
+WARN_RESULT: int = 10 ** 3000

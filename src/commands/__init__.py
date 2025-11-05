@@ -1,10 +1,11 @@
-from .filesystem import cmd_cp, cmd_mv, cmd_rm
+from .filesystem import cmd_cp, cmd_mv, cmd_rm, cmd_touch
 from .grep import cmd_grep
 from .info import cmd_ls, cmd_pwd
 from .tar_archives import cmd_tar, cmd_untar
 from .undo import cmd_undo
 from .viewer import cmd_cat, cmd_cd, cmd_history
 from .zip_archives import cmd_unzip, cmd_zip
+from .extra import cmd_bc
 
 commands = {
     "cp": cmd_cp,
@@ -21,6 +22,8 @@ commands = {
     "tar": cmd_tar,
     "untar": cmd_untar,
     "grep": cmd_grep,
+    "touch": cmd_touch,
+    "bc": cmd_bc,
 }
 
 __all__ = [
