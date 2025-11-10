@@ -200,11 +200,17 @@ def cmd_touch(args):
     if len(args) == 0:
         raise ShellError("touch: not enough arguments")
     else:
+        flag = False
         for p in args:
             src = normalize(p)
             if src.exists():
                 continue
             try:
                 pathlib.Path(src).touch()
+                if not flag:
+                    record = {"cmd": "touch", "user_input": "touch " + " ".join(args),
+                              "number": get_last_history_number() + 1}
+                    create_history_record(record)
+                    flag = True
             except Exception as e:
                 raise ShellError(f"touch: '{src}' failed with error: '{e}'")
