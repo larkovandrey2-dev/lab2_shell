@@ -98,23 +98,39 @@ def cmd_mv(args):
     if len(args) < 2:
         raise ShellError(f"mv: not enough arguments: '{args}'")
     elif len(args) > 2:
-        dest = normalize(args[-1])
-        if not dest.is_dir():
-            raise ShellError(f"mv: not a directory: '{dest}'")
+        dest_dir = normalize(args[-1])
+        if not dest_dir.is_dir():
+            raise ShellError(f"mv: not a directory: '{dest_dir}'")
+
         last_cmd_number = get_last_history_number() + 1
         for p in args[:-1]:
             src = ensure_exists(normalize(p), "mv")
+
             if src.is_dir():
                 try:
-                    if dest.relative_to(src):
-                        raise ShellError(f"mv: cannot move directory into itself: '{dest}'")
+                    if dest_dir.relative_to(src):
+                        raise ShellError(f"mv: cannot move directory into itself: '{dest_dir}'")
                 except ValueError:
                     pass
-            else:
-                dest = dest / src.name
-            shutil.move(src, dest)
-            record = {"cmd": "mv", "src": str(src), "dest": str(dest),
-                      "user_input": "mv " + " ".join(args), "number": last_cmd_number, "multi": len(args)}
+
+            dest_path = dest_dir / src.name
+
+            if dest_path.exists():
+                if dest_path.is_dir():
+                    shutil.rmtree(dest_path)
+                else:
+                    dest_path.unlink()
+
+            shutil.move(src, dest_path)
+
+            record = {
+                "cmd": "mv",
+                "src": str(src),
+                "dest": str(dest_path),
+                "user_input": "mv " + " ".join(args),
+                "number": last_cmd_number,
+                "multi": len(args)
+            }
             create_history_record(record)
     else:
         src = ensure_exists(normalize(args[0]), "mv")

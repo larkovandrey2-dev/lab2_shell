@@ -45,9 +45,18 @@ def undo_mv(src,dest):
     """
     src = normalize(src)
     dest = normalize(dest)
+
     if not dest.exists():
         raise ShellError(f"undo: moved file '{dest}' was changed or deleted; can't undo")
-    shutil.move(dest, src)
+
+    if src.exists():
+        for item in dest.iterdir():
+            shutil.move(str(item), src / item.name)
+        if dest.is_dir():
+            dest.rmdir()
+    else:
+        src.parent.mkdir(parents=True, exist_ok=True)
+        shutil.move(dest, src)
 
 def cmd_undo(args):
     """

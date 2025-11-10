@@ -1,0 +1,115 @@
+{"cmd": "ls", "number": 1, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 2}
+{"cmd": "ls", "number": 3, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 4}
+{"cmd": "cp", "src": "/Users/andrew/Documents/GitHub/lab2_shell/dir1", "dest": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir1", "user_input": "cp -r dir1 dir2 test_dir", "number": 5, "multi": 2}
+{"cmd": "cp", "src": "/Users/andrew/Documents/GitHub/lab2_shell/dir2", "dest": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir2", "user_input": "cp -r dir1 dir2 test_dir", "number": 5, "multi": 2}
+{"cmd": "ls", "number": 6, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 8}
+{"cmd": "ls", "number": 9, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 10}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 11}
+{"cmd": "ls", "number": 12, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 13}
+{"cmd": "touch", "user_input": "touch file.txt", "number": 14}
+{"cmd": "touch", "user_input": "touch file22.txt", "number": 15}
+{"cmd": "cd", "user_input": "cd ..", "number": 16}
+{"cmd": "cd", "user_input": "cd dir2", "number": 17}
+{"cmd": "touch", "user_input": "touch secret123.txt", "number": 18}
+{"cmd": "touch", "user_input": "touch 33.txt", "number": 19}
+{"cmd": "cd", "user_input": "cd ..", "number": 20}
+{"cmd": "ls", "number": 21, "user_input": "ls "}
+{"cmd": "touch", "user_input": "touch doc.txt", "number": 22}
+{"cmd": "touch", "user_input": "touch p.txt", "number": 23}
+{"cmd": "ls", "number": 24, "user_input": "ls "}
+{"cmd": "history", "user_input": "history ", "number": 25}
+{"cmd": "ls", "number": 26, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir2", "number": 28}
+{"cmd": "ls", "number": 29, "user_input": "ls "}
+{"cmd": "undo", "number": 30, "user_input": "undo"}
+{"cmd": "ls", "number": 31, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 32}
+{"cmd": "ls", "number": 33, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 35}
+{"cmd": "ls", "number": 36, "user_input": "ls "}
+{"cmd": "undo", "number": 37, "user_input": "undo"}
+{"cmd": "ls", "number": 38, "user_input": "ls "}
+{"cmd": "ls", "number": 40, "user_input": "ls "}
+{"cmd": "undo", "number": 41, "user_input": "undo"}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 42}
+{"cmd": "ls", "number": 43, "user_input": "ls "}
+{"cmd": "ls", "number": 45, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 46}
+{"cmd": "ls", "number": 47, "user_input": "ls "}
+{"cmd": "undo", "number": 48, "user_input": "undo"}
+{"cmd": "cd", "user_input": "cd ..", "number": 49}
+{"cmd": "ls", "number": 50, "user_input": "ls "}
+{"cmd": "ls", "number": 52, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir2", "number": 53}
+{"cmd": "ls", "number": 54, "user_input": "ls "}
+{"cmd": "undo", "number": 55, "user_input": "undo"}
+{"cmd": "ls", "number": 56, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 57}
+{"cmd": "ls", "number": 58, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 59}
+{"cmd": "ls", "number": 60, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 61}
+{"cmd": "undo", "number": 62, "user_input": "undo"}
+{"cmd": "ls", "number": 63, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 64}
+{"cmd": "ls", "number": 65, "user_input": "ls "}
+{"cmd": "mv", "src": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir1/dir1", "dest": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir2", "user_input": "mv dir1 ../dir2", "number": 66}
+{"cmd": "ls", "number": 67, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 68}
+{"cmd": "ls", "number": 69, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir2", "number": 70}
+{"cmd": "ls", "number": 71, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 72}
+{"cmd": "ls", "number": 73, "user_input": "ls "}
+{"cmd": "ls", "number": 75, "user_input": "ls "}
+{"cmd": "undo", "number": 76, "user_input": "undo"}
+{"cmd": "ls", "number": 77, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 78}
+{"cmd": "ls", "number": 79, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 80}
+{"cmd": "ls", "number": 81, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 82}
+{"cmd": "ls", "number": 83, "user_input": "ls "}
+{"cmd": "mv", "src": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir1/dir1", "dest": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir2", "user_input": "mv dir1 ../dir2", "number": 84}
+{"cmd": "cd", "user_input": "cd ..", "number": 85}
+{"cmd": "ls", "number": 86, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir2", "number": 87}
+{"cmd": "ls", "number": 88, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 89}
+{"cmd": "ls", "number": 91, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir2", "number": 92}
+{"cmd": "ls", "number": 93, "user_input": "ls "}
+{"cmd": "undo", "number": 94, "user_input": "undo"}
+{"cmd": "ls", "number": 95, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 96}
+{"cmd": "ls", "number": 97, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 98}
+{"cmd": "ls", "number": 99, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 100}
+{"cmd": "ls", "number": 101, "user_input": "ls "}
+{"cmd": "ls", "number": 103, "user_input": "ls "}
+{"cmd": "undo", "number": 104, "user_input": "undo"}
+{"cmd": "ls", "number": 105, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 106}
+{"cmd": "ls", "number": 107, "user_input": "ls "}
+{"cmd": "cp", "src": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir1/33.txt", "dest": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir", "is_dir": false, "user_input": "cp 33.txt ..", "number": 108}
+{"cmd": "ls", "number": 109, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 110}
+{"cmd": "ls", "number": 111, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd dir1", "number": 112}
+{"cmd": "cd", "user_input": "cd ..", "number": 114}
+{"cmd": "ls", "number": 115, "user_input": "ls "}
+{"cmd": "undo", "number": 116, "user_input": "undo"}
+{"cmd": "ls", "number": 117, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd test_dir", "number": 118}
+{"cmd": "cd", "user_input": "cd dir1", "number": 119}
+{"cmd": "ls", "number": 120, "user_input": "ls "}
+{"cmd": "mv", "src": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir1/dir1", "dest": "/Users/andrew/Documents/GitHub/lab2_shell/test_dir/dir1/dir2", "user_input": "mv dir1 dir2", "number": 121}
+{"cmd": "ls", "number": 122, "user_input": "ls "}
+{"cmd": "cd", "user_input": "cd ..", "number": 123}
+{"cmd": "cd", "user_input": "cd ..", "number": 124}
